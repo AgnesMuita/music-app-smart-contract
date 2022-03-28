@@ -12,8 +12,6 @@ function routes(app, dbe,lms, accounts){
 
   app.post('/register',(req,res)=>{
     let email = req.body.email
-    // model.id =nanoid();
-    // let idd = model.id
     let idd = shortid.generate()
     if(email){
       db.findOne({email},(err, doc)=>{
