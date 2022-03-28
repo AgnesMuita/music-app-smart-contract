@@ -18,7 +18,7 @@ else{
 }
 //build a contract based on the migrated json file and truffle contract package 
 const LMS = contract(artifacts);
-//set the contract provider to the web3 instance provider initialized on line 11
+//set the contract provider to the web3 instance provider initialized already
 LMS.setProvider(web3.currentProvider);
 
 mongodb.connect(process.env.DB,{useUnifiedTopology:true},async(err, client)=>{
